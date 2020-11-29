@@ -1,6 +1,6 @@
 ## ✨ About
 
-Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract Winter Park mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and how much it has snowed during for
+Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract Winter Park mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and how much it has snowed for
 the current day. 
 
 
