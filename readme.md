@@ -5,11 +5,11 @@ Hi there! The goal of this project is to utilize a Python back end for web scrap
 
 ## 🤝 Considerations and goals
 
-Input custom dates and compare historically
-API to request/post data
-Text SMS for instant stats of the day... takes the hard work out for you!
-Login for users?
-Deployment on Heroku
+Input custom dates and compare historically  
+API to request/post data  
+Text SMS for instant stats of the day... takes the hard work out for you!  
+Login for users?  
+Deployment on Heroku  
 
 ## 🚀 Software Stack
 
