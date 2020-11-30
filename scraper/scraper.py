@@ -1,12 +1,13 @@
 # Scraper to grab Winterpark.com data, unsuccessful due to Incapsula error - Using Selenium 
 # Side note: Cannot grab HTML but can find elements
 from WPData import *
+from api import api
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 # Setup to change browser options
 options = Options()
-options.add_argument("--window-size=1920,1200")
+options.add_argument('--window-size=1920,1200')
 # Comment below to run web browser, currently running Selenium without display
 options.headless = True
 
