@@ -1,13 +1,10 @@
-class WPData:
+class Data:
 
-    def __init__(self, temp, depth1, depth2,
-        depth3, depth4, lifts, trails):
+    def __init__(self, temp, depth1, depth2, lifts, trails):
 
         self.temp = temp
         self.depth_total = depth1
         self.depth_overnight = depth2
-        self.depth_24 = depth3
-        self.depth_48 = depth4
         self.lifts = lifts
         self.trails = trails
 
@@ -16,8 +13,6 @@ class WPData:
         'Temp: ' + self.temp + '\n' 
         'Depth total: ' + self.depth_total + '\n' 
         'Snow overnight: ' + self.depth_overnight + '\n' 
-        'Snow 24hr: ' + self.depth_24 + '\n' 
-        'Snow 48hr: ' + self.depth_48 + '\n'
         'Lifts open: ' + self.lifts + '\n'
         'Trails open: ' + self.trails + '\n'
         )
