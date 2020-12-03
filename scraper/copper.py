@@ -16,7 +16,7 @@ driver = webdriver.Chrome(options=options, executable_path="c:\\chromedriver.exe
 driver.get(url)
 
 # Grabbing Copper data via Xpath - selecting by id/class is tedious
-def grab_data():
+def copper_data():
     temp = driver.find_element_by_xpath(
         '/html/body/div[1]/div/div[1]/primary-header/div/nav/div[1]/feeds-list/ul/li[1]/button/div[1]/widget-weather/div/span'
         ).text
@@ -36,13 +36,10 @@ def grab_data():
     trails = driver.find_element_by_xpath(
         '//*[@id="main-content"]/cms-level0/section[2]/cms-level1/div[2]/section[2]/div[5]/cms-level3/section/ui-section/div/div/dor-trail-report/div/div/dor-elm-loader/div/div/div[1]/div[1]/dor-percent-wheel/div/svg/text[1]'
         ).text """
-    print(depth_total)
-    print(temp)
-    #return Data(temp, depth_total, depth_overnight, lifts, trails)
+    
+    driver.quit()
+    return data(temp, depth_total, depth_overnight, lifts, trails)
 
-copper = grab_data()
-#copper.print()
-driver.quit()
 
 
 

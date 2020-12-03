@@ -1,4 +1,4 @@
-class Data:
+class data:
 
     def __init__(self, temp, depth1, depth2, lifts, trails):
 
