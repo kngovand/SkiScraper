@@ -1,6 +1,6 @@
 ## ✨ About
 
-Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and whether  
+Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and whether Copper or Winter Park is a better choice for the day. 
 
 
 ## 🤝 Considerations and goals
