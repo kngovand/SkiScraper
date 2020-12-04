@@ -1,4 +1,4 @@
-# Scraper to grab Winterpark.com data, unsuccessful due to Incapsula error - Using Selenium 
+# Scraper to grab Copper data using Selenium 
 # Side note: Cannot grab HTML but can find elements
 from data import *
 from selenium import webdriver
@@ -25,22 +25,21 @@ def copper_data():
         cms-level3/section/ui-section/div/div/dor-snow-report/div/div/dor-elm-loader/div/div/dor-grid/\
         div/div/div/dor-grid-item[1]/div/dor-grid/div/div/div/dor-grid-item[5]/div/div/h3'
         ).text
-    """depth_overnight = driver.find_element_by_xpath(
+    depth_overnight = driver.find_element_by_xpath(
         '//*[@id="main-content"]/cms-level0/section[2]/cms-level1/div[2]/section[2]/div[5]/ \
         cms-level3/section/ui-section/div/div/dor-snow-report/div/div/dor-elm-loader/div/div/dor-grid/ \
         div/div/div/dor-grid-item[1]/div/dor-grid/div/div/div/dor-grid-item[1]/div/div/h3'
         ).text
-    lifts = driver.find_element_by_xpath(
-        '//*[@id="main-content"]/cms-level0/section[2]/cms-level1/div[2]/section[2]/div[5]/cms-level3/section/ui-section/div/div/dor-trail-report/div/div/dor-elm-loader/div/div/div[1]/div[2]/dor-percent-wheel/div/svg/text[1]'
-        ).text
-    trails = driver.find_element_by_xpath(
-        '//*[@id="main-content"]/cms-level0/section[2]/cms-level1/div[2]/section[2]/div[5]/cms-level3/section/ui-section/div/div/dor-trail-report/div/div/dor-elm-loader/div/div/div[1]/div[1]/dor-percent-wheel/div/svg/text[1]'
-        ).text """
-    
+    trails_lifts = driver.find_elements_by_class_name("progress")
+    # class name "progress" returns multiple indexes, so 4 = lifts and 3 = trails
+    # the index also returns multiple lines, so only grabbing first line using split()
+    lifts = trails_lifts[4].text.split('\n')[0]
+    trails = trails_lifts[3].text.split('\n')[0]
+
     driver.quit()
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
-
+copper = copper_data().print()
 
 
 
