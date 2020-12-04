@@ -4,12 +4,13 @@ from data import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+# Setup to change browser options
+options = Options()
+options.add_argument('--window-size=1920,1200')
+# Comment below to run web browser, currently running Selenium without display
+options.headless = True
+
 def wp_data():
-    # Setup to change browser options
-    options = Options()
-    options.add_argument('--window-size=1920,1200')
-    # Comment below to run web browser, currently running Selenium without display
-    options.headless = True
 
     # Selenium setup
     url = 'https://www.winterparkresort.com/the-mountain/mountain-report'
