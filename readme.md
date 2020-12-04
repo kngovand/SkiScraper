@@ -1,7 +1,6 @@
 ## ✨ About
 
-Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract Winter Park mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and how much it has snowed for
-the current day. 
+Hi there! The goal of this project is to utilize a Python backend for web scraping/crawling to extract mountain stats and display the data on a React website. Users will be able to see the weather, lifts/trails open, and whether  
 
 
 ## 🤝 Considerations and goals
@@ -14,7 +13,7 @@ Deployment on Heroku
 
 ## 🚀 Software Stack
 
-Python backend webscraper: Selenium, Flask
+Python backend webscraper: Selenium, Flask API  
 Persistence: MySQL or AWS S3?  
 React JS frontend using Bootstrap  
 Twilio for texting API  
