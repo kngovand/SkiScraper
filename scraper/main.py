@@ -1,20 +1,25 @@
+import json
+import time
 from flask import Flask, jsonify
-from wp import *
-from copper import *
+from wp import wp_data
+from copper import copper_data
+from data import *
 
 app = Flask(__name__)
 
-# returns winter park / copper data objects 
-wp = wp_data()
-#cp = copper_data()
-
 @app.route('/')
 def index():
-    return 'api.py index'
+    return 'main.py index'
 
-@app.route('/today', methods=['GET'])
-def data_today():
+@app.route('/today')
+def today():
     return 'today'
+
+@app.route('/json')
+def data():
+    wp = wp_data().dict()
+    x = json.dumps(wp)
+    return x
     
 if __name__ == "__main__":
     app.debug = True

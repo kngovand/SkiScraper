@@ -1,17 +1,17 @@
 # Scraper to grab Winterpark.com data, unsuccessful due to Incapsula error - Using Selenium 
 # Side note: Cannot grab HTML but can find elements
+import json
 from data import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 # Setup to change browser options
 options = Options()
-options.add_argument('--window-size=1920,1200')
+options.add_argument('--window-size=1920, 1200')
 # Comment below to run web browser, currently running Selenium without display
 options.headless = True
 
 def wp_data():
-
     # Selenium setup
     url = 'https://www.winterparkresort.com/the-mountain/mountain-report'
     driver = webdriver.Chrome(options=options, executable_path="c:\\chromedriver.exe")
@@ -39,7 +39,7 @@ def wp_data():
 
     driver.quit()
     return data(temp, depth_total, depth_overnight, lifts, trails)
-    
+
 
 
 

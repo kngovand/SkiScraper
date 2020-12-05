@@ -6,12 +6,11 @@ from selenium.webdriver.chrome.options import Options
 
 # Setup to change browser options
 options = Options()
-options.add_argument('--window-size=1920,1200')
+options.add_argument('--window-size=1920, 1200')
 # Comment below to run web browser, currently running Selenium without display
 options.headless = True
 
 def copper_data():
-
     # Selenium setup
     url = 'https://www.coppercolorado.com/the-mountain/conditions-weather/snow-report'
     driver = webdriver.Chrome(options=options, executable_path="c:\\chromedriver.exe")
@@ -19,7 +18,8 @@ def copper_data():
 
     # Grabbing Copper data via Xpath - selecting by id/class is tedious
     temp = driver.find_element_by_xpath(
-        '/html/body/div[1]/div/div[1]/primary-header/div/nav/div[1]/feeds-list/ul/li[1]/button/div[1]/widget-weather/div/span'
+        '/html/body/div[1]/div/div[1]/primary-header/div/nav/div[1]/\
+            feeds-list/ul/li[1]/button/div[1]/widget-weather/div/span'
         ).text
     depth_total = driver.find_element_by_xpath(
         '//*[@id="main-content"]/cms-level0/section[2]/cms-level1/div[2]/section[2]/div[5]/\

@@ -8,6 +8,7 @@ class data:
         self.lifts = lifts
         self.trails = trails
 
+    # testing purposes
     def print(self):
         print(
         'Temp: ' + self.temp + '\n' 
@@ -16,4 +17,13 @@ class data:
         'Lifts open: ' + self.lifts + '\n'
         'Trails open: ' + self.trails + '\n'
         )
+
+    # for API
+    def dict(self):
+        x = {
+            "temp": self.temp,
+            "depth": self.depth_total,
+            "depth_24": self.depth_overnight 
+        }
+        return x
 
