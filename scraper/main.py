@@ -11,16 +11,25 @@ app = Flask(__name__)
 def index():
     return 'main.py index'
 
+#Today: WP or copper choice?
 @app.route('/today')
 def today():
-    return 'today'
+    return 'today stats'
 
-@app.route('/json')
-def data():
+#Winter park stats
+@app.route('/wp')
+def wp():
     wp = wp_data().dict()
     x = json.dumps(wp)
     return x
-    
+
+#Copper stats
+@app.route('/cp')
+def cp():
+    cp = copper_data().dict()
+    x = json.dumps(cp)
+    return x
+
 if __name__ == "__main__":
     app.debug = True
     app.run()

@@ -41,5 +41,11 @@ def copper_data():
     driver.quit()
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
+cp = copper_data()
+# To get int back
+price = int ( ''.join(filter(str.isdigit, cp.temp) ) )
+
+print(price)
+
 
 
