@@ -39,13 +39,20 @@ def copper_data():
     trails = trails_lifts[3].text.split('\n')[0]
 
     driver.quit()
+
+    # int conversion
+    temp = int( ''.join(filter(str.isdigit, temp) ))
+    depth_total = int( ''.join(filter(str.isdigit, depth_total) ))
+    depth_overnight = int( ''.join(filter(str.isdigit, depth_overnight) ))
+    lifts = int( ''.join(filter(str.isdigit, lifts) ))
+    trails = int( ''.join(filter(str.isdigit, trails) ))
+
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
-cp = copper_data()
-# To get int back
-price = int ( ''.join(filter(str.isdigit, cp.temp) ) )
+cp = copper_data().dict()
 
-print(price)
+
+
 
 
 

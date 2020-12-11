@@ -31,17 +31,24 @@ def wp_data():
             div[3]/div[2]/div[1]/div[2]/div[2]/div[3]/div[2]'
             ).text
     lifts = driver.find_element_by_xpath(
-            '//*[@id="mountainConditionsApp"]/div[2]/div[2]/div/div[1]/div[2]'
-            ).text
+            '//*[@id="mountainConditionsApp"]/div[2]/div[2]/div/div[1]/div[2]/span'
+                ).text
     trails = driver.find_element_by_xpath(
-            '//*[@id="mountainConditionsApp"]/div[2]/div[2]/div/div[2]/div[2]'
+            '//*[@id="mountainConditionsApp"]/div[2]/div[2]/div/div[2]/div[2]/span'
             ).text
 
     driver.quit()
+
+    # int conversion
+    temp = int(temp.split('.',1)[0])
+    depth_total = int(depth_total.split('.',1)[0])
+    depth_overnight = int(depth_overnight.split('.',1)[0])
+    lifts = int(lifts)
+    trails = int(trails)    
+
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
-
-
-
+wp = wp_data()
+print(wp.dict())
 
 
