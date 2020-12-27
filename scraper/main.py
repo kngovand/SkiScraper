@@ -1,7 +1,6 @@
 #api load for cp/wp taking too long - considerations: preloading data daily into database and calling today data
 
 import json
-import time
 from flask import Flask, jsonify
 from wp import wp_data
 from copper import copper_data
