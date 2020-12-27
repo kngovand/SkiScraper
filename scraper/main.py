@@ -1,3 +1,5 @@
+#api load for cp/wp taking too long - considerations: preloading data daily into database and calling today data
+
 import json
 import time
 from flask import Flask, jsonify
@@ -9,12 +11,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'main.py index'
+    return 'Copper VS Winter Park!'
 
 #Today: WP or copper choice?
 @app.route('/today')
 def today():
-    return 'today stats'
+    wp = wp_data()
+    cp = copper_data()
+
+    #compare int temp
+    if(wp.temp > cp.temp):
+        return 'Winter park is warmer today: ' + str(wp.temp)
+    else:
+        return 'Copper is warmer today: ' + str(cp.temp)
 
 #Winter park stats
 @app.route('/wp')

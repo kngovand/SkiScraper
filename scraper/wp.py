@@ -48,7 +48,6 @@ def wp_data():
 
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
-wp = wp_data()
-print(wp.dict())
+
 
 

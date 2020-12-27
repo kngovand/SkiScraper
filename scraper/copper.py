@@ -49,8 +49,6 @@ def copper_data():
 
     return data(temp, depth_total, depth_overnight, lifts, trails)
 
-cp = copper_data().dict()
-
 
 
 
